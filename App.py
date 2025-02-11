@@ -14,11 +14,11 @@ if uploaded_model is not None:
     # Load the uploaded model
     model = joblib.load(uploaded_model)
 
-    # LabelEncoder for encoding categorical variables (same as used during training)
+    # LabelEncoder for encoding categorical variables
     label_encoder = LabelEncoder()
 
     # Collect input features from the user
-    company = st.selectbox('Car Company', ['Company A', 'Company B', 'Company C'])  # Add your company names
+    company = st.selectbox('Car Company', ['Company A', 'Company B', 'Company C']) 
     year = st.number_input('Car Year', min_value=1990, max_value=2025, value=2015)
     present_price = st.number_input('Present Price (in INR)', min_value=0.0, value=500000)
     kms_driven = st.number_input('Kilometers Driven', min_value=0, value=50000)
@@ -27,7 +27,7 @@ if uploaded_model is not None:
     transmission = st.selectbox('Transmission Type', ['Manual', 'Automatic'])
     owner = st.number_input('Number of Owners', min_value=1, max_value=5, value=1)
 
-    # Prepare the input data for prediction (same encoding as in training)
+    # Prepare the input data for prediction 
     company_encoded = label_encoder.transform([company])[0]
     fuel_type_encoded = label_encoder.transform([fuel_type])[0]
     seller_type_encoded = label_encoder.transform([seller_type])[0]
