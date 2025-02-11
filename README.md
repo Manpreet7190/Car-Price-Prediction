@@ -1,5 +1,5 @@
 # Car-Price-Prediction
-In this project, I use a Linear Regression model to predict the selling price of used cars. The model is trained using:
+In this project, I used a Linear Regression model to predict the selling price of used cars. The model is trained using:
 
 Company: The manufacturer of the car.
 Year: The year of manufacture.
